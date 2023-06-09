@@ -84,11 +84,13 @@ namespace EICraft;
         public CraftingPrice crafting_price { get; set; }
     }
 
-    public class Root
+    public class EiafxData
     {
         [JsonProperty("$schema")]
-        public string schema { get; set; }
-        public List<ArtifactFamily> artifact_families { get; set; }
+        public string schema { get; set; } = null!;
+
+        [JsonProperty("artifact_families")]
+        public List<ArtifactFamily> artifactFamilies { get; set; } = null!;
     }
 
     public class Tier
